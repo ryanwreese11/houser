@@ -17,6 +17,7 @@ module.exports = {
 
   createHouse: (req, res) => {
     const { name, address, city, state, zip } = req.body
+    console.log('is this working',req.body)
     req.app.get('db')
       .create_house([name, address, city, state, zip])
       .then(() => {

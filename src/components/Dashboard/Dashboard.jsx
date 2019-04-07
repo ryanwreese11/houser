@@ -25,7 +25,6 @@ export class Dashboard extends Component {
   
   getHouses() {
     axios.get('/api/houses').then(res => {
-      console.log(res.data)
       this.setState({
         houses: res.data
       })
